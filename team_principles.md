@@ -18,7 +18,7 @@ Define your team’s working practices.
 * If someone feels frustrated or hopes for a change, how should they raise it with the team?
 
 
-# MVP
+# Daily plan
 
 Define your plan for the week. What meetings will you have? 
 
