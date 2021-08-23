@@ -20,7 +20,9 @@ Define your team’s working practices.
 
 # MVP
 
-Define your plan for the week. What meetings will you have? What are you aiming for with your MVP?
+Define your plan for the week. What meetings will you have? 
+
+**What are you aiming for with your MVP?**
 
 | Task            | Time           |
 | :-------------  | :------------- |
@@ -38,4 +40,17 @@ Define your plan for the week. What meetings will you have? What are you aiming 
 | :-------------  | :------------- |
 | Retro           | 17:30          |
 | :-------------  | :------------- |
+
+
+**Sprint planning **
+
+Prioritisation and estimation
+
+**Daily stand-ups  ~ 15 mins**
+
+What did I do 
+What will I do 
+Blockers?
+Retrospectives
+
 
