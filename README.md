@@ -39,4 +39,37 @@ Mockups for MakersBnB are available here.
 
 # User Stories 
 
-A user stories section (leave it blank for now).
+````
+As a User
+So my space can be viewed by others
+I would like to create a space
+
+As a User
+So I can advertise multiple spaces
+I would like to list multiple spaces
+
+As a User
+So other users can get information about my spaces
+I can name, price and describe my space
+
+As a User/Owner of space
+So I can show availability to other users
+I can set available dates for my spaces
+
+As a User
+So that I can hire a space
+I want to be able to book a space
+
+As a User/Owner of space
+So that I can approve bookings from other users
+I would like to confirm a booking
+
+As a User
+So I don't see spaces that have already been booked
+I would like to only see available booking dates
+
+As a the Owner of space
+So my space is continually advertised
+I would like to confirm completed bookings
+
+````
