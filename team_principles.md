@@ -39,7 +39,7 @@ Define your plan for the week. What meetings will you have?
 | Project work    | 14:00          |
 | :-------------  | :------------- |
 | Retro           | 17:30          |
-| :-------------  | :------------- |
+|                 |                |
 
 
 **Sprint planning **
