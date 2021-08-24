@@ -7,6 +7,11 @@ class BnB < Sinatra::Base
     register Sinatra::Contrib
   end
 
+  configure :test, :development do
+    @db_connection = Connect.initiate(ENV["DB_IN_USE"])
+    CreateTables.if_not_exists(@db_connection)
+  end
+
   enable :sessions
 
   get '/bnb/listings' do

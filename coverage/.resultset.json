@@ -1,40 +1,22 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/hotungamorehuelkington/Desktop/Projects/Group-Work/Makers-BNB/spec/features/create_spec.rb": {
+      "/Users/graemestirling/Makers/Week_5/Makers-BNB/spec/unit/init_db_conn_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/hotungamorehuelkington/Desktop/Projects/Group-Work/Makers-BNB/spec/features/lists_all_spaces_spec.rb": {
-        "lines": [
-          1,
           null,
           1,
           1,
           1,
-          1,
-          1,
+          2,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1629820810
+    "timestamp": 1629821232
   }
 }
