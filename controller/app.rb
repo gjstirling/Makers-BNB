@@ -5,7 +5,7 @@ require 'sinatra/contrib'
 class BnB < Sinatra::Base
 
   get '/' do
-    'Hiiiiiiiiii'
+    'Hiiiiiiiiiiiii'
   end
 
   run! if app_file == $0
