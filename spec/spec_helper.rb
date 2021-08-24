@@ -8,7 +8,7 @@ require 'capybara/rspec'
 # require 'setup_test_db'
 require File.join(File.dirname(__FILE__), '..', 'controller', 'app.rb')
 
-# Capybara.app = BnB
+Capybara.app = BnB
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
