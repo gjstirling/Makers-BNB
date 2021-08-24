@@ -3,10 +3,7 @@
 <head>
 </head>
 <body>
-  <h1>Space 1</h1>
-  <form method='get'>
-    <input type='submit' name='view' value='View space'>
-  </form>
+  <h1>Listings</h1>
 
   <form action='/bnb/create'>
     <input type='submit' name='create' value='List space'>
@@ -14,9 +11,10 @@
 
   <% @arr.each do |stuff| %>
     <div>
-      <ul>
-        <li><%= stuff %></li>
-      </ul>
+        <%= stuff %>
+        <form method='get'>
+        <input type='submit' name='view' value='View space'>
+      </form>
     </div>
   <% end %>
 </body>
