@@ -6,7 +6,7 @@ require 'capybara'
 require 'rspec'
 require 'capybara/rspec'
 # require 'setup_test_db'
-require File.join(File.dirname(__FILE__), '..', 'controller', 'app.rb')
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 Capybara.app = BnB
 

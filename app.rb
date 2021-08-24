@@ -8,8 +8,13 @@ class BnB < Sinatra::Base
   end
 
   get '/bnb/listings' do
-    erb(:'bnb/listings')
+    erb :'bnb/listings'
   end
+
+  get 'bnb/create' do
+    
+  end
+  
 
   run! if app_file == $0
 end
