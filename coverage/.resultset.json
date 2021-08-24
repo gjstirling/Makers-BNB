@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/radunecsanu/Desktop/Projects/Ruby/Makers-BNB/spec/unit/init_db_conn_spec.rb": {
+      "/Users/graemestirling/Makers/Week_5/Makers-BNB/spec/unit/init_db_conn_spec.rb": {
         "lines": [
           1,
           null,
@@ -17,6 +17,6 @@
         ]
       }
     },
-    "timestamp": 1629819780
+    "timestamp": 1629821232
   }
 }
