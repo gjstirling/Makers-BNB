@@ -3,9 +3,12 @@ require 'sinatra/base'
 require 'sinatra/contrib'
 
 class BnB < Sinatra::Base
+  configure :development do
+    register Sinatra::Contrib
+  end
 
-  get '/' do
-    'Hiiiiiiiiii'
+  get '/bnb/listings' do
+    erb(:'bnb/listings')
   end
 
   run! if app_file == $0

@@ -1,7 +1,21 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/hotungamorehuelkington/Desktop/Projects/Group-Work/Makers-BNB/spec/features/lists_all_spaces_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      }
     },
-    "timestamp": 1629802118
+    "timestamp": 1629814195
   }
 }
