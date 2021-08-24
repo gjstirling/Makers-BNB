@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'pg'
-#require 'active_record'
+require './db/init_db_tables.rb'
 
 class Connect 
 

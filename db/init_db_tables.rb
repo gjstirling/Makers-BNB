@@ -1,3 +1,6 @@
+require 'pg'
+
+
 class CreateTables
 
     def self.if_not_exists(connection)
@@ -7,7 +10,7 @@ class CreateTables
         CREATE TABLE IF NOT EXISTS users(
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
-        created_at TIMESTAMP default current_timestamp,
+        created_at TIMESTAMP default current_timestamp
         )
       ")
       # Space table 
@@ -19,7 +22,7 @@ class CreateTables
         price INT NOT NULL,
         description VARCHAR(500) NOT NULL,
         capacity INT NOT NULL,
-        created_at TIMESTAMP default current_timestamp,
+        created_at TIMESTAMP default current_timestamp
         )
       ")
 
@@ -31,7 +34,7 @@ class CreateTables
         space_id INT NOT NULL,
         start_date INT NOT NULL, 
         end_date INT NOT NULL,
-        created_at TIMESTAMP default current_timestamp,
+        created_at TIMESTAMP default current_timestamp
         )
       ")
     end
