@@ -1,4 +1,5 @@
 ENV['DB_TEST_ENV'] = 'test'
+ENV["DB_IN_USE"] = 'july21_makersbnb_creative_team'
 
 require 'simplecov'
 require 'simplecov-console'
