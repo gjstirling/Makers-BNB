@@ -1,0 +1,21 @@
+<!DOCKTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <h1>Listings</h1>
+
+  <form action='/bnb/create'>
+    <input type='submit' name='create' value='List space'>
+  </form>
+
+  <% @arr.each do |stuff| %>
+    <div>
+        <%= stuff %>
+        <form method='get'>
+        <input type='submit' name='view' value='View space'>
+      </form>
+    </div>
+  <% end %>
+</body>
+</html>

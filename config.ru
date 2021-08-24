@@ -1,2 +1,2 @@
-require './controller/app.rb'
+require './app.rb'
 run BnB
