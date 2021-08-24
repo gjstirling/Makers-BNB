@@ -4,10 +4,7 @@ class CreateTables
       connection.exec("
         CREATE TABLE IF NOT EXISTS users(
         id SERIAL PRIMARY KEY,
-        email VARCHAR(40) NOT NULL UNIQUE,
-        password VARCHAR(40) NOT NULL,
         name VARCHAR(100) NOT NULL,
-        username VARCHAR(40) NOT NULL UNIQUE,
         created_at TIMESTAMP default current_timestamp,
         updated_at TIMESTAMP default current_timestamp
         )
