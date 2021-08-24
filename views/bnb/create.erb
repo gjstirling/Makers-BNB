@@ -3,14 +3,17 @@
 <head>
 </head>
 <body>
-  <h1>Seaside Lodge</h1>
-  <p> It is nice </p>
-  <p> £90 per night </p>
+<h1>Create a listing by inputing information into the following fields</h1>
+  <form action='/bnb/new_listing' method='post'>
+    <label for='name'>Space Name</label>
+    <input type='text' name='name'>
 
-  <form method='get'>
-    <input type='text' name='name' value='Space Name'>
-    <input type='text' name='name' value='Description'>
-    <input type='text' name='name' value='Price'>
+    <label for='description'>Description</label>
+    <input type='text' name='description' >
+
+    <label for='price'>Price</label>
+    <input type='number' name='price' >
+
     <input type='submit' name='view' value='Create listing'>
   </form>
 

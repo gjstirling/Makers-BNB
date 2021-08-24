@@ -8,8 +8,16 @@
     <input type='submit' name='view' value='View space'>
   </form>
 
-  <form action='/bnb/create' method='get'>
+  <form action='/bnb/create'>
     <input type='submit' name='create' value='List space'>
   </form>
+
+  <% @arr.each do |stuff| %>
+    <div>
+      <ul>
+        <li><%= stuff %></li>
+      </ul>
+    </div>
+  <% end %>
 </body>
 </html>

@@ -7,12 +7,22 @@ class BnB < Sinatra::Base
     register Sinatra::Contrib
   end
 
+  enable :sessions
+
   get '/bnb/listings' do
+    @arr = [ [session[:name], session[:description], session[:price]] ] # Represents Space instance
     erb :'bnb/listings'
   end
 
-  get 'bnb/create' do
-    
+  get '/bnb/create' do
+    erb :'bnb/create'
+  end
+
+  post '/bnb/new_listing' do
+    session[:name] = params[:name]
+    session[:description] = params[:description]
+    session[:price] = params[:price]
+    redirect('/bnb/listings')
   end
   
 
