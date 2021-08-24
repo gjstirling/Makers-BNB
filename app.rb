@@ -1,6 +1,7 @@
 require 'pg'
 require 'sinatra/base'
 require 'sinatra/contrib'
+require './db/init_db_conn.rb'
 
 class BnB < Sinatra::Base
   configure :development do
