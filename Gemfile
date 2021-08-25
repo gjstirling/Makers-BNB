@@ -2,13 +2,20 @@ source 'https://rubygems.org'
 
 ruby '3.0.0'
 
-gem 'activerecord' # gem install activerecord
 gem 'pg'
 gem 'rack'
 gem 'selenium-webdriver'
-gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'webrick'
+<<<<<<< HEAD
+=======
+gem 'rake'
+gem 'sinatra'
+gem 'sinatra-activerecord'
+gem 'activerecord', '>= 4.1'
+gem 'pry'
+gem 'pry-byebug'
+>>>>>>> main
 
 
 group :test do
