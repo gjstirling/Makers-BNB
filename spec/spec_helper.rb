@@ -11,6 +11,9 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 Capybara.app = BnB
 
+#Needed classes
+require 'user'
+
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
   # Want a nice code coverage website? Uncomment this next line!
