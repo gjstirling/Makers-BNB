@@ -39,6 +39,12 @@ class BnB < Sinatra::Base
     session[:price] = params[:price]
     redirect('/bnb/listings')
   end
+
+  post '/bnb/create_user' do
+    @user = user.create(params[:name])
+  end
+
+  post
   
   get '/usersx/?' do # just for testing
     @users = User.all

@@ -1,7 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
+      "/Users/zainabbaruud/Projects/Makers-BNB/spec/features/create_spec.rb": {
+=======
       "/Users/radunecsanu/Desktop/Projects/Ruby/Makers-BNB/spec/features/create_spec.rb": {
+>>>>>>> main
         "lines": [
           1,
           null,
@@ -20,7 +24,11 @@
           null
         ]
       },
+<<<<<<< HEAD
+      "/Users/zainabbaruud/Projects/Makers-BNB/spec/features/lists_all_spaces_spec.rb": {
+=======
       "/Users/radunecsanu/Desktop/Projects/Ruby/Makers-BNB/spec/features/lists_all_spaces_spec.rb": {
+>>>>>>> main
         "lines": [
           1,
           null,
@@ -34,7 +42,11 @@
           null
         ]
       },
+<<<<<<< HEAD
+      "/Users/zainabbaruud/Projects/Makers-BNB/spec/unit/init_db_conn_spec.rb": {
+=======
       "/Users/radunecsanu/Desktop/Projects/Ruby/Makers-BNB/spec/unit/init_db_conn_spec.rb": {
+>>>>>>> main
         "lines": [
           1,
           null,
@@ -48,8 +60,45 @@
           null,
           null
         ]
+      },
+      "/Users/zainabbaruud/Projects/Makers-BNB/spec/unit/space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/zainabbaruud/Projects/Makers-BNB/spec/unit/user_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
+<<<<<<< HEAD
+    "timestamp": 1629903663
+=======
     "timestamp": 1629894096
+>>>>>>> main
   }
 }
