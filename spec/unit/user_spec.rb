@@ -5,4 +5,6 @@ describe User do
     user = User.new('Zainab')
     expect(user.name).to eq('Zainab')
   end
+
+
 end

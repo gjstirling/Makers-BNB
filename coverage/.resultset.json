@@ -49,6 +49,17 @@
           null
         ]
       },
+      "/Users/zainabbaruud/Projects/Makers-BNB/spec/unit/space_spec.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/zainabbaruud/Projects/Makers-BNB/spec/unit/user_spec.rb": {
         "lines": [
           null,
@@ -58,10 +69,12 @@
           1,
           1,
           null,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1629888292
+    "timestamp": 1629889049
   }
 }
