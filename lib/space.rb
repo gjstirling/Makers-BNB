@@ -9,6 +9,10 @@ class Space
     @price = price
     @max_guests = max_guests
     @owner_id = owner_id
+
+ # When instance of class is created, information needs to be stored 
+# inside the spaces table inside the DB (name of working DB)
+
   end
 
 end
