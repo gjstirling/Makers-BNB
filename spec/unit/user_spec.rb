@@ -8,7 +8,8 @@ describe User do
   end
 
   it 'should have a create space method' do 
-
+    user = User.new('Graeme')
+    expect(user).to respond_to(:create_space)
   end 
 
 end

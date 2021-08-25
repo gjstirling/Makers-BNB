@@ -30,6 +30,12 @@ class BnB < Sinatra::Base
     session[:price] = params[:price]
     redirect('/bnb/listings')
   end
+
+  post '/bnb/create_user' do
+    @user = user.create(params[:name])
+  end
+
+  post
   
 
   run! if app_file == $0

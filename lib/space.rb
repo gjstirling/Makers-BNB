@@ -12,7 +12,8 @@ class Space
 
  # When instance of class is created, information needs to be stored 
 # inside the spaces table inside the DB (name of working DB)
-
   end
+  
+  
 
 end
