@@ -2,8 +2,17 @@ require 'pg'
 require 'sinatra/base'
 require 'sinatra/contrib'
 require './db/init_db_conn.rb'
+require 'sinatra/activerecord'
+
+
+class User < ActiveRecord::Base
+end
 
 class BnB < Sinatra::Base
+  before do
+    content_type :json
+  end
+
   configure :development do
     register Sinatra::Contrib
   end
@@ -31,6 +40,10 @@ class BnB < Sinatra::Base
     redirect('/bnb/listings')
   end
   
+  get '/usersx/?' do # just for testing
+    @users = User.all
+    @users.to_json
+  end
 
   run! if app_file == $0
 end
