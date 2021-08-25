@@ -1,16 +1,23 @@
 require 'pg'
 require 'sinatra/base'
 require 'sinatra/contrib'
+ENV['DATABASE_URL'] = 'july21_makersbnb_creative_team'
+$DATABASE_URL = 'july21_makersbnb_creative_team'
+require "sinatra/activerecord"
 require './db/init_db_conn.rb'
+set :database, {adapter: "sqlite3", database: ENV["DB_IN_USE"]}
+# or set :database_file, "path/to/database.yml"
 
 class BnB < Sinatra::Base
+  register Sinatra::ActiveRecordExtension
+
   configure :development do
     register Sinatra::Contrib
   end
 
   configure :test, :development do
-    @db_connection = Connect.initiate(ENV["DB_IN_USE"])
-    CreateTables.if_not_exists(@db_connection)
+    # @db_connection = Connect.initiate(ENV["DB_IN_USE"])
+    # CreateTables.if_not_exists(@db_connection)
   end
 
   enable :sessions
