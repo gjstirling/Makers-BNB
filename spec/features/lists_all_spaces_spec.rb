@@ -1,10 +1,15 @@
+require './spec/web_helper.rb'
 feature 'lists the spaces' do
-
+  spaces = reset_table_space_and_seed
   scenario 'When on the index route, spaces are listed for users to view' do
-    visit('/bnb/listings')
-    expect(page).to have_content('Listings')
-    expect(page).to have_button('View space')
-    expect(page).to have_button('List space')
+    visit('/')
+    #spaces.each do |space|
+      space = spaces[0]
+      expect(page).to have_content(space["name"])
+      expect(page).to have_content(space["description"])
+      expect(page).to have_content(space["price"])
+      expect(page).to have_content(space["capacity"])
+    #end
   end
 
 end

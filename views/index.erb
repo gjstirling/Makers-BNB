@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BnB</title>
+  </head>
+  <body>
+    <section name="header">
+      <h4>
+        <a href="/create">Add space</a>
+      </h4>
+    </section>
+    <section name="body">
+    <% @spaces.each do |space| %>
+     <div>
+      <section name="name">
+       <h3><%= space["name"] %></h3>
+      </section>
+      <section name="description">
+        <h3><%= space["description"] %></h3>
+      </section>
+      <section name="price">
+        <h3><%= space["price"] %></h3>
+      </section>
+      <section name="capacity">
+        <h3><%= space["capacity"] %></h3>
+      </section>
+     </div>
+    <% end %>
+    </section>
+    <section name="footer">
+
+    </section>
+  </body>
+</html>

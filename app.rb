@@ -9,9 +9,7 @@ require './lib/user.rb'
 
 
 class BnB < Sinatra::Base
-  before do
-    content_type :json
-  end
+
 
   configure :development do
     register Sinatra::Contrib
@@ -24,13 +22,19 @@ class BnB < Sinatra::Base
 
   enable :sessions
 
-  get '/bnb/listings' do
+  get '/listings' do
     @arr = [ [session[:name], session[:description], session[:price]] ] # Represents Space instance
     erb :'bnb/listings'
   end
 
-  get '/bnb/create' do
-    erb :'bnb/create'
+  get '/create' do
+    erb :create
+  end
+
+  get '/' do
+    db_connection = Connect.initiate(ENV["DB_IN_USE"])
+    @spaces = db_connection.exec("SELECT * FROM spaces").to_a
+    erb :index
   end
 
   post '/bnb/new_listing' do
