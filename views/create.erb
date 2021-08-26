@@ -4,14 +4,13 @@
 </head>
 <body>
 <h1>Create a listing by inputing information into the following fields</h1>
+  <h4><%= @error %></h4>
   <h4 style="text-align:center">
-  <form action='/bnb/new_listing' method='post'>
-    <input type='text' name='name' placeholder="Space name"><br/>
-
-    <input type='text' name='description' placeholder="Description"><br/>
-
-    <input type='number' name='price' placeholder="Price"><br/>
-
+  <form action='/create_exec' method='post'>
+    <input type='text' name='name' placeholder="Space name" required><br/>
+    <input type='text' name='description' placeholder="Description" required><br/>
+    <input type='number' name='price' placeholder="Price" required><br/>
+    <input type='number' name='capacity' placeholder="Capacity" required><br/>
     <input type='submit' name='view' value='Create space'>
   </form>
   </h4>
