@@ -3,10 +3,10 @@ require 'sinatra/base'
 require 'sinatra/contrib'
 require './db/init_db_conn.rb'
 require 'sinatra/activerecord'
+require './lib/user.rb'
 
 
-class User < ActiveRecord::Base
-end
+
 
 class BnB < Sinatra::Base
   before do
