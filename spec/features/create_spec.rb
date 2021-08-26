@@ -1,15 +1,27 @@
+require './spec/web_helper.rb'
 feature 'create a space' do
+  spaces = reset_table_space_and_seed
 
-  # scenario 'When create space button is clicked user is taken to this page' do
-  #   visit('/listings')
-  #   click_button('List space')
-  #   fill_in('name', with: 'Seaside Lodge')
-  #   fill_in('description', with: 'It is nice')
-  #   fill_in('price', with: 90 )
-  #   click_button('Create listing')
-  #   expect(page).to have_content ('Seaside Lodge')
-  #   expect(page).to have_content ('It is nice')
-  #   expect(page).to have_content ('90')
-  # end
+  scenario 'We see an error message if creation of space is not successful' do
+    visit('/create')
+    fill_in('name', with: 'Seaside Lodge')
+    fill_in('description', with: 'It is nice')
+    fill_in('price', with: "ff" )
+    fill_in('capacity', with: 33 )
+    click_button('Create space')
+    expect(page).to have_current_path('/create?error=Something went wrong..')
+    expect(page).to have_content ('Something went wrong..')
+  end
+
+  scenario 'it works adding spaces to db table' do
+    visit('/create')
+    fill_in('name', with: "Seasides Lodge")
+    fill_in('description', with: 'It is nice')
+    fill_in('price', with: 22 )
+    fill_in('capacity', with: 22 )
+    click_button('Create space')
+    # expect(page).to have_content ("Seaside&#39;s Lodge")
+    expect(page).to have_current_path('/')
+  end
 
 end
