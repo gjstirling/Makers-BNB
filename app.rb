@@ -28,7 +28,19 @@ class BnB < Sinatra::Base
   end
 
   get '/create' do
+    (params['error'].nil?) ? (@error = '') : (@error = params['error'])
     erb :create
+  end
+
+  post '/create_exec' do
+    params.each do |key, value|
+       params[key] = value.to_i if (value.to_i.is_a?(Integer) && (key == "price" || key == "capacity"))
+    end
+    params["user_id"] = 1
+    Create.check_params?(params)
+    redirect('/create?error=Something went wrong..') unless Create.check_params?(params)
+    Create.add_space(params)
+    redirect('/') # success
   end
 
   get '/' do
