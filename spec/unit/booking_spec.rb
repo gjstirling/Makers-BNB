@@ -8,6 +8,6 @@ describe Booking do
 
   it "Contains attributes start_date, end_date" do 
     expect(booking).to have_attributes(:start_date => "27-08-21", :end_date => "29-08-21", :user_id => 1, :space_id => 2)
-  end 
+  end
 
 end 

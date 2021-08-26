@@ -7,5 +7,6 @@ class Booking
     @end_date = end_date
     @user_id = user_id
     @space_id = space_id
-  end 
+  end
+
 end 
