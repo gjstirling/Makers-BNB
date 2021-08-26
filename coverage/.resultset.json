@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/hotungamorehuelkington/Desktop/Projects/Group-Work/Makers-BNB/spec/features/create_spec.rb": {
+      "/Users/graemestirling/Makers/Week_5/Makers-BNB/spec/features/create_spec.rb": {
         "lines": [
           1,
           null,
@@ -39,7 +39,7 @@
           null
         ]
       },
-      "/Users/hotungamorehuelkington/Desktop/Projects/Group-Work/Makers-BNB/spec/features/lists_all_spaces_spec.rb": {
+      "/Users/graemestirling/Makers/Week_5/Makers-BNB/spec/features/lists_all_spaces_spec.rb": {
         "lines": [
           1,
           null,
@@ -58,7 +58,24 @@
           null
         ]
       },
-      "/Users/hotungamorehuelkington/Desktop/Projects/Group-Work/Makers-BNB/spec/unit/init_db_conn_spec.rb": {
+      "/Users/graemestirling/Makers/Week_5/Makers-BNB/spec/unit/booking_spec.rb": {
+        "lines": [
+          1,
+          null,
+          3,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/graemestirling/Makers/Week_5/Makers-BNB/spec/unit/init_db_conn_spec.rb": {
         "lines": [
           1,
           null,
@@ -73,7 +90,7 @@
           null
         ]
       },
-      "/Users/hotungamorehuelkington/Desktop/Projects/Group-Work/Makers-BNB/spec/unit/space_spec.rb": {
+      "/Users/graemestirling/Makers/Week_5/Makers-BNB/spec/unit/space_spec.rb": {
         "lines": [
           1,
           1,
@@ -87,13 +104,19 @@
           null
         ]
       },
-      "/Users/hotungamorehuelkington/Desktop/Projects/Group-Work/Makers-BNB/spec/unit/user_spec.rb": {
+      "/Users/graemestirling/Makers/Week_5/Makers-BNB/spec/unit/user_spec.rb": {
         "lines": [
           null,
           null,
           1,
           null,
           1,
+          4,
+          null,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           null,
@@ -101,12 +124,19 @@
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1629971295
+    "timestamp": 1629977470
   }
 }
