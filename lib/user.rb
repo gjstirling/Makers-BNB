@@ -15,7 +15,7 @@ attr_reader :name
   end
 
   def create_booking
-    Booking.new("27-08-21", "29-08-21", 1, 2)
+    # Booking.new("27-08-21", "29-08-21", 1, 2)
   end
 
 end

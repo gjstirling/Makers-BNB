@@ -18,7 +18,8 @@ describe User do
       expect(user).to respond_to(:create_booking)
     end
 
-    it 'takes four arguments' do
+    it 'recieves four arguments to apply to booking instance' do
+
 
     end
 
