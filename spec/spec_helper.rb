@@ -14,6 +14,7 @@ Capybara.app = BnB
 #Needed classes
 require 'user'
 require 'space'
+require 'booking'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
