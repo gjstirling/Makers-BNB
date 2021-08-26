@@ -24,6 +24,9 @@
       <section name="capacity">
         <h3><%= space["capacity"] %></h3>
       </section>
+      <section name="book">
+        <h3><a href='/create_booking?space_id=<%= space["id"] %>'>Book space <%= space["name"] %></a></h3>
+      </section>
      </div>
     <% end %>
     </section>

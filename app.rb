@@ -50,6 +50,10 @@ class BnB < Sinatra::Base
     erb :index
   end
 
+  get '/create_booking' do
+    erb :create_booking
+  end
+
   post '/bnb/new_listing' do
     session[:name] = params[:name]
     session[:description] = params[:description]
