@@ -1,13 +1,13 @@
 
 class Space
 
-  attr_reader :name, :description, :price, :max_guests, :owner_id
+  attr_reader :name, :description, :price, :capacity, :owner_id
 
-  def initialize(name, description, price, max_guests, owner_id)
+  def initialize(name, description, price, capacity, owner_id)
     @name = name
     @description = description
     @price = price
-    @max_guests = max_guests
+    @capacity = capacity
     @owner_id = owner_id
 
  # When instance of class is created, information needs to be stored 
