@@ -1,20 +1,20 @@
 <!DOCKTYPE html>
 <html>
 <head>
+  <link rel='stylesheet' href='my_style_sheet.css'>
 </head>
 <body>
 <h1>Create a listing by inputing information into the following fields</h1>
   <h4><%= @error %></h4>
-  <h4 style="text-align:center">
-  <form action='/create_exec' method='post'>
-    <input type='text' name='name' placeholder="Space name" required><br/>
-    <input type='text' name='description' placeholder="Description" required><br/>
-    <input type='number' name='price' placeholder="Price" required><br/>
-    <input type='number' name='capacity' placeholder="Capacity" required><br/>
-    <input type='submit' value='Create space'>
+  <form action='/create_exec' method='post' class='create_form' class='create__form__style'>
+    <ul>
+      <li><input type='text' name='name' placeholder="Space name" required class='input_field'></li>
+      <li><textarea name='description' placeholder="Description" required class='input_field'></textarea></li>
+      <li><input type='number' name='price' placeholder="Price" required class='input_field'></li>
+      <li><input type='number' name='capacity' placeholder="Capacity" required class='input_field'></li>
+      <li><input type='submit' value='Create space' class='button__style'></li>
+    </ul>
   </form>
-  </h4>
-
 </body>
 </html>
 
