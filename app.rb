@@ -4,6 +4,7 @@ require 'sinatra/contrib'
 require './db/init_db_conn.rb'
 require 'sinatra/activerecord'
 require './lib/user.rb'
+require './lib/create.rb'
 
 
 
