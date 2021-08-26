@@ -7,15 +7,12 @@ gem 'rack'
 gem 'selenium-webdriver'
 gem 'sinatra-contrib'
 gem 'webrick'
-<<<<<<< HEAD
-=======
 gem 'rake'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'activerecord', '>= 4.1'
 gem 'pry'
 gem 'pry-byebug'
->>>>>>> main
 
 
 group :test do
