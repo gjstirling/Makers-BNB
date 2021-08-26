@@ -27,8 +27,8 @@ class BnB < Sinatra::Base
     erb :'bnb/listings'
   end
 
-  get '/bnb/create' do
-    erb :'bnb/create'
+  get '/create' do
+    erb :create
   end
 
   get '/' do
