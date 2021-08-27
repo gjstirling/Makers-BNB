@@ -23,6 +23,9 @@
           <li>Maximum occupants: <%= space["capacity"] %></li>
         </ul>
         </subtitle>
+        <form action='/create_booking'>
+          <input type='submit' value='Book space <%= space["name"] %>'>
+        </form>
       </section>
     <% end %>
     </section>
