@@ -85,10 +85,13 @@ class BnB < Sinatra::Base
        params[key] = value.to_i if (value.to_i.is_a?(Integer) && (key == "price" || key == "capacity"))
     end
     @signed_in = session[:signed_in]
-    params["user_id"] = 1
+    params["user_id"] = session["user_id"]
+    params["space_id"] = session["space_id"]
+    params["start_date"] = session['start_date']
+    params["end_date"] = session['end_date']
     CreateSpace.check_params?(params)
     redirect('/create_space?error=Something went wrong..') unless CreateSpace.check_params?(params)
-    CreateSpace.add_space(params)
+    CreateSpace.add_booking(params)
     redirect('/') # success
   end
 
@@ -96,9 +99,11 @@ class BnB < Sinatra::Base
     @signed_in = session[:signed_in]
     (params['error'].nil?) ? (@error = '') : (@error = params['error'])
     @space = CreateBooking.get_space(params["space_id"])
+    session["space_id"] = params["space_id"]
+    session["user_id"] = params["user_id"]
     session['space_price'] = @space["price"]
     session['start_date'] = Time.now
-    session['end_date'] = Time.now.to_i + (24 * 60 * 60)
+    session['end_date'] = Time.now.to_i + (100)
     erb :create_booking
   end
 
