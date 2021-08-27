@@ -7,10 +7,14 @@ class CreateTables
 
       # User table 
       connection.exec("
-        CREATE TABLE IF NOT EXISTS users(
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(100) NOT NULL,
-        created_at TIMESTAMP default current_timestamp
+      CREATE TABLE IF NOT EXISTS users(
+      id SERIAL PRIMARY KEY,
+      email VARCHAR(40) NOT NULL UNIQUE,
+      password VARCHAR(40) NOT NULL,
+      name VARCHAR(100) NOT NULL,
+      username VARCHAR(40) NOT NULL UNIQUE,
+      created_at TIMESTAMP default current_timestamp,
+      updated_at TIMESTAMP default current_timestamp
         )
       ")
       # Space table 
@@ -34,6 +38,7 @@ class CreateTables
         space_id INT NOT NULL,
         start_date INT NOT NULL, 
         end_date INT NOT NULL,
+        confirmed BOOLEAN NOT NULL,
         created_at TIMESTAMP default current_timestamp
         )
       ")

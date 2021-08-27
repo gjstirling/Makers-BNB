@@ -4,7 +4,8 @@ require 'sinatra/contrib'
 require './db/init_db_conn.rb'
 require 'sinatra/activerecord'
 require './lib/user.rb'
-require './lib/create.rb'
+require './lib/create_space.rb'
+require './lib/create_booking.rb'
 
 
 
@@ -23,14 +24,9 @@ class BnB < Sinatra::Base
 
   enable :sessions
 
-  get '/listings' do
-    @arr = [ [session[:name], session[:description], session[:price]] ] # Represents Space instance
-    erb :'bnb/listings'
-  end
-
-  get '/create' do
+  get '/create_space' do
     (params['error'].nil?) ? (@error = '') : (@error = params['error'])
-    erb :create
+    erb :create_space
   end
 
   post '/create_exec' do
@@ -38,34 +34,64 @@ class BnB < Sinatra::Base
        params[key] = value.to_i if (value.to_i.is_a?(Integer) && (key == "price" || key == "capacity"))
     end
     params["user_id"] = 1
-    Create.check_params?(params)
-    redirect('/create?error=Something went wrong..') unless Create.check_params?(params)
-    Create.add_space(params)
+    CreateSpace.check_params?(params)
+    redirect('/create_space?error=Something went wrong..') unless CreateSpace.check_params?(params)
+    CreateSpace.add_space(params)
     redirect('/') # success
   end
 
   get '/' do
+    session[:signed_in] = false if session[:signed_in].nil?
+    @signed_in = session[:signed_in]
     db_connection = Connect.initiate(ENV["DB_IN_USE"])
-    @spaces = db_connection.exec("SELECT * FROM spaces").to_a
+    @spaces = db_connection.exec("SELECT * FROM spaces ORDER BY id DESC").to_a
     erb :index
   end
 
-  post '/bnb/new_listing' do
-    session[:name] = params[:name]
-    session[:description] = params[:description]
-    session[:price] = params[:price]
-    redirect('/bnb/listings')
+  get '/signin' do
+    erb :signin
   end
 
-  post '/bnb/create_user' do
-    @user = user.create(params[:name])
+  post '/signin_exec' do
+    session[:username] = params[:username].clean_key
+    session[:signed_in] = false
+    session[:signed_in] = true unless User.get(params[:username].to_sym, params[:password].to_sym).nil?
+    redirect('/') if session[:signed_in] == true
+    redirect('/signin?error=User and password do not match')
   end
 
-  post
-  
-  get '/usersx/?' do # just for testing
-    @users = User.all
-    @users.to_json
+  get '/signout' do
+    session[:signed_in] = false
+    redirect('/')
+  end
+
+  get '/create_user' do
+    erb :create_user
+  end
+
+  post '/create_user_exec' do
+    session[:username] = params[:username].clean_key
+    User.add(params).nil? ? (session[:registered_user] = false) : (session[:registered_user] = true)
+    session[:signed_in] = true if session[:registered_user] == true
+    redirect('/') if session[:registered_user] == true
+    redirect('/create_user?error=Something went wrong')
+  end
+
+  get '/create_booking_exec' do
+    params.each do |key, value|
+       params[key] = value.to_i if (value.to_i.is_a?(Integer) && (key == "price" || key == "capacity"))
+    end
+    params["user_id"] = 1
+    CreateSpace.check_params?(params)
+    redirect('/create_space?error=Something went wrong..') unless CreateSpace.check_params?(params)
+    CreateSpace.add_space(params)
+    redirect('/') # success
+  end
+
+  get '/create_booking' do
+    (params['error'].nil?) ? (@error = '') : (@error = params['error'])
+    @space = CreateBooking.get_space(params["space_id"])
+    erb :create_booking
   end
 
   run! if app_file == $0

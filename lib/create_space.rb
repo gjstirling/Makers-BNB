@@ -2,7 +2,7 @@ require 'pg'
 require './lib/string.rb'
 require './db/init_db_conn.rb'
 
-class Create
+class CreateSpace
 
   def self.check_params?(form_inputs)
     ret_value = true
