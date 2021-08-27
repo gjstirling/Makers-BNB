@@ -1,18 +1,35 @@
 <!DOCKTYPE html>
 <html>
 <head>
-<title>Create booking</title>
+  <link rel='stylesheet' href='my_style_sheet.css'>
 </head>
 <body>
-<h1>Create a listing by inputing information into the following fields</h1>
+
+<!-- navbar begin -->
+
+<nav id="navbar" class="navbar">
+  <h1 class="navbar__title">Menu</h1>
+  <ul class="navbar__list">
+      <li class="navbar__item">
+        <a href="/" class="navbar__link">Spaces</a>
+      </li>
+  </ul>
+</nav>
+
+<!-- navbar end -->
+
+<header>
+  <h1>Create booking</h1>
+</header>
   <h4><%= @error %></h4>
-  <h4 style="text-align:center">
   <form action='/create_exec' method='post'>
-    <input type='date' name='start_date' placeholder= "01/09/2021" required><br/>
-    <input type='date' name='end_date' placeholder="21/09/2021" required><br/>
+    <input type='date' name='start_date' required><br/>
+    <input type='date' name='end_date' required><br/>
     <input type='submit' value='Book space'>
   </form>
-  </h4>
 
+<footer>
+
+</footer>
 </body>
 </html>

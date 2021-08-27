@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
+ <head>
   <link rel='stylesheet' href='my_style_sheet.css'>
-  </head>
-  <body>
+ </head>
+<body>
+<div class='conatiner'>
+<!-- navbar begin -->
+
+  <nav id="navbar" class="navbar">
+    <h1 class="navbar__title">Menu</h1>
+    <ul class="navbar__list">
+      <li class="navbar__item">
+          <a href="/" class="navbar__link">Spaces</a>
+      </li>
+      <li class="navbar__item">
+        <a href="/login" class="navbar__link">Login</a>
+      </li>
+    </ul>
+  </nav>
+
+<!-- navbar end -->
+
   <header>
-    BnB
+    <h1>BnB</h1>
   </header>
     <section name="header">
       <form action='/create' method='get'>
         <input type='submit' value='Add space' class='button__style'>
       </form>
     </section>
-    <section name="body">
+
+    <!-- Space grid begin -->
+
+    <section class='spaces'>
+    <div class='space-grid'>
     <% @spaces.each do |space| %>
       <section name="name" class='space_card'>
        <h3><%= space["name"] %></h3>
         <subtitle>
         <ul>
           <li>Description: <%= space["description"] %></li>
-          <li>$<%= space["price"] %></li>
+          <li>Price $<%= space["price"] %></li>
           <li>Maximum occupants: <%= space["capacity"] %></li>
         </ul>
         </subtitle>
         <form action='/create_booking'>
-          <input type='submit' value='Book space <%= space["name"] %>'>
+          <input type='submit' value='Book space <%= space["name"] %>' class='button__style'>
         </form>
       </section>
     <% end %>
     </section>
-    <section name="footer">
 
-    </section>
+    <!-- Space grid end -->
+
+    <footer>
+
+    </footer>
+    </div>
   </body>
 </html>

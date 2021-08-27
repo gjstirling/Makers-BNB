@@ -22,31 +22,112 @@
         0.125em 0.125em 0.25em rgba(0,0,0,.15),
         0.0625em 0.0625em 0.125em rgba(0,0,0,.075);
 }
+/* General Styles */
 
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
   margin: 0;
   font-family: var(--ff-primary);
-  font-size: var(--fs-h1);
+  font-size: var(--fs-body);
   line-height: 1.6;
-  text-align: center;
 }
 
-h1 {
+section {
+  padding: 5em 3em;
+}
+
+.section__subtitle {
+  background-color: var(--clr-theme);
+}
+
+/* Typography */
+
+h1,
+h2 {
   line-height: 1.1;
   margin: 0;
 }
 
-input[type=text],
-h1 { 
-display: inline-block;
-font-size: var(--fs-h1); 
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+
+strong {
+  font-weight: var(--fw-bold);
 }
 
-ul {
-  list-style: none;
+.section__title {
+  text-align: center;
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-reg);
 }
+
+.section__subtitle--intro {
+  padding: .05em 1em;
+  font-size: var(--fs-h3);
+  
+}
+
+ul, ol, li, a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--clr-dark);
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+}
+
+.navbar__title {
+  display: none;
+  color: var(--clr-light);
+}
+
+.navbar__list {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+}
+
+.navbar__item {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0.25em 2em;
+  text-transform: uppercase;
+
+}
+
+.navbar__link {
+  margin: 0;
+  padding: 1em 1.5em;
+  color: var(--clr-light);
+}
+
+.navbar__link:hover {
+  background-color: var(--clr-theme);
+  transition: .1s;
+
+}
+
+.space-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+  max-width: 900px;
+  gap: 2.5em;
+}
+
+
 
 .button__style {
   width: 40%;
@@ -75,4 +156,10 @@ form {
   box-sizing: border-box;
   justify-content: center;
   align-content: center;
+}
+
+.space_card {
+  border: 1px var(--clr-dark);
+  display: grid;
+  justify-content: center;
 }

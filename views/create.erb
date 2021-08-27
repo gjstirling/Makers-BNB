@@ -4,6 +4,20 @@
   <link rel='stylesheet' href='my_style_sheet.css'>
 </head>
 <body>
+
+<!-- nabar begin -->
+
+  <nav id="navbar" class="navbar">
+    <h1 class="navbar__title">Menu</h1>
+    <ul class="navbar__list">
+      <li class="navbar__item">
+          <a href="/" class="navbar__link">Spaces</a>
+      </li>
+    </ul>
+  </nav>
+
+<!-- nabar end -->
+
 <h1>Create a listing by inputing information into the following fields</h1>
   <h4><%= @error %></h4>
   <form action='/create_exec' method='post' class='create_form' class='create__form__style'>
