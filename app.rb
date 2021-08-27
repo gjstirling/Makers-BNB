@@ -25,6 +25,7 @@ class BnB < Sinatra::Base
   enable :sessions
 
   get '/create_space' do
+    @signed_in = session[:signed_in]
     (params['error'].nil?) ? (@error = '') : (@error = params['error'])
     erb :create_space
   end
@@ -55,7 +56,9 @@ class BnB < Sinatra::Base
   post '/signin_exec' do
     session[:username] = params[:username].clean_key
     session[:signed_in] = false
-    session[:signed_in] = true unless User.get(params[:username].to_sym, params[:password].to_sym).nil?
+    user = User.get(params[:username].to_sym, params[:password].to_sym)
+    session[:signed_in] = true unless user.nil?
+    # params["user_id"] = user[0][:id]
     redirect('/') if session[:signed_in] == true
     redirect('/signin?error=User and password do not match')
   end
@@ -81,6 +84,7 @@ class BnB < Sinatra::Base
     params.each do |key, value|
        params[key] = value.to_i if (value.to_i.is_a?(Integer) && (key == "price" || key == "capacity"))
     end
+    @signed_in = session[:signed_in]
     params["user_id"] = 1
     CreateSpace.check_params?(params)
     redirect('/create_space?error=Something went wrong..') unless CreateSpace.check_params?(params)
@@ -89,8 +93,12 @@ class BnB < Sinatra::Base
   end
 
   get '/create_booking' do
+    @signed_in = session[:signed_in]
     (params['error'].nil?) ? (@error = '') : (@error = params['error'])
     @space = CreateBooking.get_space(params["space_id"])
+    session['space_price'] = @space["price"]
+    session['start_date'] = Time.now
+    session['end_date'] = Time.now.to_i + (24 * 60 * 60)
     erb :create_booking
   end
 

@@ -76,15 +76,19 @@
     </div>
     <section class="keep-left" name="Login">
       <a class="button logo" href="/">Makers BnB</a>
-      <a href="/signin" class="button right">Sign in</a>
+      <% if @signed_in !=true %>
+        <a class="button right" href="/signin">Sign in</a>
+      <% else %>
+        <a class="button right" href="/signout">Sign out</a>
+      <% end %>
     </section>
     <hr>
     <section name="form" tab-index="0" data-error="<%= params[:error] %>">
-      <form class="form_peep keep-center" action="/peep_exec" method="post">
+      <form class="form_peep keep-center" action="/create_booking_exec" method="post">
        <div><%= @space["name"] %></div>
        <div><textarea disable minlength="5" maxlength="500" rows="5" name="peep" required placeholder=" "/><%= @space["description"] %></textarea><div data-pattern="5 to 50 long"></div></div>
-       <div><%= @space["capacity"] %></div>
-       <div>£<%= @space["price"] %></div>
+       <div>Capacity: <%= @space["capacity"] %></div>
+       <div>Price(p/n): £<%= @space["price"] %></div>
        <input type="submit" name="submit" value="Book space"/>
       </form>
     </section>

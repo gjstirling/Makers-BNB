@@ -76,7 +76,11 @@
     </div>
     <section class="keep-left" name="Login">
       <a class="button logo" href="/">Makers BnB</a>
-      <a href="/signin" class="button right">Sign in</a>
+      <% if @signed_in !=true %>
+        <a class="button right" href="/signin">Sign in</a>
+      <% else %>
+        <a class="button right" href="/signout">Sign out</a>
+      <% end %>
     </section>
     <hr>
     <section name="form" tab-index="0"><%= params[:error] %>
