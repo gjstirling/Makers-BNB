@@ -4,8 +4,8 @@
   <link rel='stylesheet' href='my_style_sheet.css'>
 </head>
 <body>
-
-<!-- nabar begin -->
+<div class='conatiner'>
+<!-- navbar begin -->
 
   <nav id="navbar" class="navbar">
     <h1 class="navbar__title">Menu</h1>
@@ -13,22 +13,32 @@
       <li class="navbar__item">
           <a href="/" class="navbar__link">Spaces</a>
       </li>
+      <li class="navbar__item">
+        <a href="/login" class="navbar__link">Login</a>
+      </li>
+      <li class="navbar__item">
+        <a href="/create" class="navbar__link">List a space</a>
+       </li>
     </ul>
   </nav>
 
-<!-- nabar end -->
-
-<h1>Create a listing by inputing information into the following fields</h1>
-  <h4><%= @error %></h4>
-  <form action='/create_exec' method='post' class='create_form' class='create__form__style'>
-    <ul>
-      <li><input type='text' name='name' placeholder="Space name" required class='input_field'></li>
-      <li><textarea name='description' placeholder="Description" required class='input_field'></textarea></li>
-      <li><input type='number' name='price' placeholder="Price" required class='input_field'></li>
-      <li><input type='number' name='capacity' placeholder="Capacity" required class='input_field'></li>
-      <li><input type='submit' value='Create space' class='button__style'></li>
-    </ul>
-  </form>
+<!-- navbar end -->
+  <section class='spaces'>
+    <div class='space-grid'>
+      <h1 class='space_title'>Create a listing</h1>
+        <h4><%= @error %></h4>
+        <form action='/create_exec' method='post' class='create_form' class='create__form__style'>
+          <ul>
+            <li><input type='text' name='name' placeholder="Space name" required></li>
+            <li><input type='number' name='price' placeholder="Price" required></li>
+            <li><input type='number' name='capacity' placeholder="Capacity" required></li>
+            <li><textarea name='description' placeholder="Description" required rows="8" cols="50"></textarea></li>
+            <li><input type='submit' value='Create space' class='button__style'></li>
+          </ul>
+        </form>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
 

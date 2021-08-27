@@ -16,19 +16,14 @@
       <li class="navbar__item">
         <a href="/login" class="navbar__link">Login</a>
       </li>
+      <li class="navbar__item">
+        <a href="/create" class="navbar__link">List a space</a>
+       </li>
     </ul>
   </nav>
 
 <!-- navbar end -->
-
-  <header>
     <h1>BnB</h1>
-  </header>
-    <section name="header">
-      <form action='/create' method='get'>
-        <input type='submit' value='Add space' class='button__style'>
-      </form>
-    </section>
 
     <!-- Space grid begin -->
 
@@ -36,11 +31,11 @@
     <div class='space-grid'>
     <% @spaces.each do |space| %>
       <section name="name" class='space_card'>
-       <h3><%= space["name"] %></h3>
+       <h3 class='space_title'><%= space["name"] %></h3>
         <subtitle>
         <ul>
           <li>Description: <%= space["description"] %></li>
-          <li>Price $<%= space["price"] %></li>
+          <li>Price: $<%= space["price"] %></li>
           <li>Maximum occupants: <%= space["capacity"] %></li>
         </ul>
         </subtitle>

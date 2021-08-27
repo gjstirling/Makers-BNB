@@ -11,8 +11,9 @@
   --fw-bold: 900;
 
   --clr-light: #ffffff;
-  --clr-dark: #303030;
-  --clr-theme: #00CED1;
+  --clr-dark: #112D4E;
+  --clr-theme2: #DBE2EF;
+  --clr-theme1: #3F72AF;
 
   --fs-h1: 3rem;
 
@@ -35,10 +36,6 @@ body {
 
 section {
   padding: 5em 3em;
-}
-
-.section__subtitle {
-  background-color: var(--clr-theme);
 }
 
 /* Typography */
@@ -72,11 +69,12 @@ ul, ol, li, a {
   list-style: none;
   text-decoration: none;
   color: var(--clr-dark);
+  text-align: center;
 }
 
 .navbar {
   position: fixed;
-  background-color: var(--clr-dark);
+  background-color: var(--clr-theme2);
   margin: 0;
   width: 100%;
   display: flex;
@@ -95,7 +93,6 @@ ul, ol, li, a {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-
 }
 
 .navbar__item {
@@ -104,19 +101,22 @@ ul, ol, li, a {
   margin: 0;
   padding: 0.25em 2em;
   text-transform: uppercase;
-
 }
 
 .navbar__link {
   margin: 0;
   padding: 1em 1.5em;
-  color: var(--clr-light);
+  color: var(--clr-dark);
 }
 
 .navbar__link:hover {
-  background-color: var(--clr-theme);
+  background-color: var(--clr-theme1);
   transition: .1s;
 
+}
+
+.spaces {
+  background-color: var(--clr-theme1);
 }
 
 .space-grid {
@@ -127,18 +127,29 @@ ul, ol, li, a {
   gap: 2.5em;
 }
 
+.space_card {
+  border: 1px var(--clr-dark);
+  border-radius: 5px;
+  display: grid;
+  justify-content: center;
+  background-color: var(--clr-light);
+}
 
+.space_title {
+  text-align: center;
+}
 
 .button__style {
-  width: 40%;
-  height: 4rem;
-  background-color: var(--clr-theme);
-  color: white;
+  width: fit-content;
+  height: 2rem;
+  background-color: var(--clr-theme1);
+  color: var(--clr-light);
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  align-self: center;
 }
 
 .button__style:hover {
@@ -158,8 +169,3 @@ form {
   align-content: center;
 }
 
-.space_card {
-  border: 1px var(--clr-dark);
-  display: grid;
-  justify-content: center;
-}
